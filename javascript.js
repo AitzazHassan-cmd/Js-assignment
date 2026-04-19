@@ -30,6 +30,11 @@ function ShowProducts(productsli) {
       Add to Cart
       </button>
       `;
+      
+      card.querySelector('button').onclick = (e) => {
+        e.stopPropagation();
+        AddToCart();
+      }
       card.onclick = () => openModal(product);
       fragment.appendChild(card);
     });
