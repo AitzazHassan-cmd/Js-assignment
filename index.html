@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="w-full h-14 shadow-lg flex justify-between items-center">
+        <h1 class="text-2xl font-bold ml-2 max-sm:text-xl max-md:text-xl">My Shop</h1>
+        <input type="text" id="searchInput" placeholder="Search..."
+            class="ml-4 max-sm:w-28  max-md:w-44 border-b outline-none h-8">
+        <div class="flex h-auto items-center">
+            <select class="w-54 max-md:w-40 p-2 rounded-lg border border-gray-200 
+             bg-gray-100 text-gray-800 
+             focus:outline-none focus:ring-2 focus:ring-gray-300 
+             cursor-pointer ml-4 max-sm:hidden "  onchange="sort(this.value)">
+
+                <option value="all">All</option>
+                <option value="Low-to-Heigh">Price: Low-to-Heigh </option>
+                <option value="Heigh-to-Low">Price: Heigh-to-Low</option>
+
+            </select>
+
+            <select class="w-54 max-md:w-40 max-md:hidden p-2 rounded-lg border border-gray-200 
+             bg-gray-100 text-gray-800 
+             focus:outline-none focus:ring-2 focus:ring-gray-300 
+             cursor-pointer ml-4 max-sm:hidden " id="Categories" onchange="Category(this.value)">
+
+                <option value="All">All Categories</option>
+                <option value="Fashion">Fasion</option>
+                <option value="Electronics">Electronics</option>
+
+            </select>
+        </div>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded mr-2 max-sm:px-2 max-sm:py-1 max-sm:text-sm">
+            Cart (<span id="cart-count">0</span>)
+        </button>
+    </header>
+    <section class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="container">
+
+    </section>
+    <div id="modal" class="fixed inset-0 hidden justify-center items-center bg-black/40 backdrop-blur-sm z-50">
+
+        <div class="bg-white w-80 p-5 rounded-lg relative shadow-lg">
+
+            <button onclick="closeModal()"
+                class="absolute top-2 right-3 text-2xl font-bold text-gray-600 hover:text-black">
+                &times;
+            </button>
+            <img id="modalImg" class="w-full h-40 object-cover rounded mb-3">
+            <h2 id="modalTitle" class="text-xl font-bold mb-2"></h2>
+            <p id="modalPrice" class="text-gray-600 mb-4"></p>
+            <button onclick="AddToCart()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded w-full">
+                Add to Cart
+            </button>
+
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
