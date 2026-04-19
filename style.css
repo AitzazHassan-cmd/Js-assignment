@@ -1,0 +1,8 @@
+@media (max-width:880px) {
+    select {
+        width: 130px;
+    }
+    button {
+        padding: 8px 12px;
+    }
+}
