@@ -14,7 +14,7 @@
         <input type="text" id="searchInput" placeholder="Search..."
             class="ml-4 max-sm:w-28  max-md:w-44 border-b outline-none h-8">
         <div class="flex h-auto items-center">
-            <select class="w-54 max-md:w-40 p-2 rounded-lg border border-gray-200 
+            <select class="w-54 max-md:w-36 p-2 rounded-lg border border-gray-200 
              bg-gray-100 text-gray-800 
              focus:outline-none focus:ring-2 focus:ring-gray-300 
              cursor-pointer ml-4 max-sm:hidden "  onchange="sort(this.value)">
@@ -25,7 +25,7 @@
 
             </select>
 
-            <select class="w-54 max-md:w-40 max-md:hidden p-2 rounded-lg border border-gray-200 
+            <select class="w-54 max-md:w-36 max-md:hidden p-2 rounded-lg border border-gray-200 
              bg-gray-100 text-gray-800 
              focus:outline-none focus:ring-2 focus:ring-gray-300 
              cursor-pointer ml-4 max-sm:hidden " id="Categories" onchange="Category(this.value)">
@@ -36,11 +36,11 @@
 
             </select>
         </div>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded mr-2 max-sm:px-2 max-sm:py-1 max-sm:text-sm">
+        <button class="lg:p-2 bg-blue-500 text-white px-4 py-2 rounded mr-2 max-sm:px-2 max-sm:py-1 max-sm:text-sm">
             Cart (<span id="cart-count">0</span>)
         </button>
     </header>
-    <section class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="container">
+    <section class="p-6 grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-6" id="container">
 
     </section>
     <div id="modal" class="fixed inset-0 hidden justify-center items-center bg-black/40 backdrop-blur-sm z-50">
